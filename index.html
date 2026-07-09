@@ -467,7 +467,7 @@
 <script>
   // Detecção imediata de link de cancelamento — ANTES de qualquer outra coisa
   (function() {
-    var hash = window.location.hash;
+    var hash = decodeURIComponent(window.location.hash);
     if (hash && hash.startsWith('#cancelar|')) {
       // Marca para processar no onload
       window._isCancelLink = true;
